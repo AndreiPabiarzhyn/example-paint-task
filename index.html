@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎨 Волшебная Рисовалка</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>🎨 Волшебная Рисовалка</h1>
+
+<div class="toolbar">
+
+    <!-- Цвета -->
+
+    <button class="color selected"
+            style="background:red"
+            onclick="setColor('red', this)">
+    </button>
+
+    <button class="color"
+            style="background:blue"
+            onclick="setColor('blue', this)">
+    </button>
+
+    <button class="color"
+            style="background:green"
+            onclick="setColor('green', this)">
+    </button>
+
+    <button class="color"
+            style="background:yellow"
+            onclick="setColor('yellow', this)">
+    </button>
+
+    <button class="color"
+            style="background:black"
+            onclick="setColor('black', this)">
+    </button>
+
+    <!-- Инструменты -->
+
+    <button onclick="setTool('brush', this)">
+        ✏️
+    </button>
+
+    <button onclick="setTool('eraser', this)">
+        🧽
+    </button>
+
+    <button class="rainbowBtn"
+            onclick="setTool('rainbow', this)">
+        🌈
+    </button>
+
+    <!-- Толщина -->
+
+    <button class="sizeBtn"
+            onclick="setSize(3, this)">
+        Тонкая
+    </button>
+
+    <button class="sizeBtn"
+            onclick="setSize(8, this)">
+        Средняя
+    </button>
+
+    <button class="sizeBtn"
+            onclick="setSize(15, this)">
+        Толстая
+    </button>
+
+    <!-- Штампы -->
+
+    <button onclick="stamp('😀', this)">
+        😀
+    </button>
+
+    <button onclick="stamp('❤️', this)">
+        ❤️
+    </button>
+
+    <button onclick="stamp('⭐', this)">
+        ⭐
+    </button>
+
+    <!-- Раскраски -->
+
+    <button class="templateBtn"
+            onclick="drawHouse()">
+        🏠
+    </button>
+
+    <button class="templateBtn"
+            onclick="drawCat()">
+        🐱
+    </button>
+
+    <button class="templateBtn"
+            onclick="drawCar()">
+        🚗
+    </button>
+
+    <!-- Очистка -->
+
+    <button class="clearBtn"
+            onclick="clearCanvas()">
+        🗑️
+    </button>
+
+</div>
+
+<canvas id="canvas"
+        width="1000"
+        height="600">
+</canvas>
+
+<script src="app.js"></script>
+
+</body>
+</html>
